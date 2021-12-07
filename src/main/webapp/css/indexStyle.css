@@ -1,0 +1,26 @@
+.content {
+    width: 40%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.login, .register, .restore {
+    opacity: 0;
+    width: 40% !important;
+    transition: opacity .3s;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+.invisible {
+    display: none;
+    opacity: 0;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

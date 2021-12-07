@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <uri>/WEB-INF/tld/BigDecimal.tld</uri>
+    <jsp-version>2.0</jsp-version>
+    <short-name>BigDecimalTag</short-name>
+
+    <tag>
+        <name>BigDecimal</name>
+        <tag-class>com.my.web.tag.BigDecimalTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>amount</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.math.BigDecimal</type>
+        </attribute>
+    </tag>
+</taglib>

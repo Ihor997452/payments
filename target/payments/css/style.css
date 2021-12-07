@@ -1,0 +1,26 @@
+.content {
+    width: 40%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.btn-override {
+    width: 150px !important;
+    text-transform: capitalize;
+}
+
+.login, .register {
+    opacity: 0;
+    width: 40%;
+    transition: opacity .3s;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+.invisible {
+    display: none;
+    opacity: 0;
+}
