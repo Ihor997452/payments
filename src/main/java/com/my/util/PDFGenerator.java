@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.IOException;
 import java.math.RoundingMode;
 
-import org.apache.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -16,8 +15,6 @@ import org.apache.pdfbox.pdmodel.font.PDTrueTypeFont;
 import org.apache.pdfbox.pdmodel.font.encoding.WinAnsiEncoding;
 
 public class PDFGenerator {
-    private static Logger log = Logger.getLogger(PDFGenerator.class);
-
     private PDFGenerator() {
     }
 

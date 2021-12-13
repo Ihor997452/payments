@@ -3,7 +3,6 @@ package com.my.util;
 import com.my.db.constants.Currency;
 import com.my.db.entity.Account;
 import com.my.db.entity.Transaction;
-import com.my.db.entity.User;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -11,7 +10,7 @@ import java.util.*;
 public class Comparators {
     private static final Map <String, Comparator<Account>> accountComparators = new TreeMap<>();
     private static final Map <String, Comparator<Transaction>> transactionComparators = new TreeMap<>();
-    private static final Map <String, Comparator<User>> userComparators = new TreeMap<>();
+
 
     static {
         accountComparators.put("balance", (o1, o2) -> {
@@ -59,10 +58,6 @@ public class Comparators {
         }
 
         return comparator;
-    }
-
-    public static Comparator<User> getUserComparator(String name) {
-        return null;
     }
 }
 

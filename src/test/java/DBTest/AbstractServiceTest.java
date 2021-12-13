@@ -24,9 +24,6 @@ abstract class AbstractServiceTest<T extends Entity> {
     @Test
     abstract void getTest();
 
-    @Test
-    abstract void editTest();
-
     protected static void connectionPoolInit() throws ClassNotFoundException, SQLException {
         String driver = PropertyReader.readPoolProperties("db.driver");
         Class.forName(driver);

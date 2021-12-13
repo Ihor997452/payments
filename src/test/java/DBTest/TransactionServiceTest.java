@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class TransactionServiceTest extends AbstractServiceTest<Transaction> {
+class TransactionServiceTest extends AbstractServiceTest<Transaction> {
     @BeforeAll
     static void init() throws SQLException, ClassNotFoundException {
         connectionPoolInit();
@@ -29,7 +29,6 @@ public class TransactionServiceTest extends AbstractServiceTest<Transaction> {
     @Test
     @Order(1)
     void insertTest() {
-        //todo: write them test
         User user = createUser();
         UserService.register(user);
         AccountService.createAccountForUser(user, Currency.UAH, "name");
@@ -43,21 +42,33 @@ public class TransactionServiceTest extends AbstractServiceTest<Transaction> {
         receiver.setBalance(BigDecimal.valueOf(20));
         BigDecimal receiverBalance = receiver.getBalance();
 
+
         boolean didTransaction = TransactionService.doTransaction(sender, transferAmount, receiver, "test");
+        boolean senderBalanceLower = sender.getBalance().compareTo(senderBalance.subtract(transferAmount)) == 0;
+        boolean receiverBalanceHigher = receiver.getBalance().compareTo(receiverBalance.add(transferAmount)) == 0;
 
-        Assertions.assertAll(
-                () -> Assertions.assertEquals(sender.getBalance(), senderBalance.subtract(transferAmount)),
-                () -> Assertions.assertEquals(receiver.getBalance(), receiverBalance.add(transferAmount))
-        );
+        Assertions.assertTrue(didTransaction && senderBalanceLower && receiverBalanceHigher);
     }
 
-    @Override
+    @Test
+    @Order(2)
     void getTest() {
-
+        Assertions.assertNotNull(TransactionService.get(1));
     }
 
-    @Override
-    void editTest() {
+    @Test
+    @Order(3)
+    void topUpTest() {
+        Account account = AccountService.get(1);
+        BigDecimal accountBalance = account.getBalance();
+        TransactionService.doTopUp(BigDecimal.valueOf(20), account, account.getCurrency());
+        Assertions.assertEquals(0, accountBalance.add(BigDecimal.valueOf(20)).compareTo(account.getBalance()));
+    }
 
+    @Test
+    @Order(4)
+    void userHasTransactionTest() {
+        User user = UserService.get(1);
+        Assertions.assertTrue(TransactionService.userHasTransaction(user, TransactionService.get(1)));
     }
 }

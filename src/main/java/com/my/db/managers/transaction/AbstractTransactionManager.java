@@ -74,6 +74,5 @@ public abstract class AbstractTransactionManager extends AbstractManager<Transac
         statement.setTimestamp(i++, entity.getTime());
         statement.setBigDecimal(i++, entity.getAmount());
         statement.setString(i, entity.getMessage());
-        System.out.println(statement);
     }
 }
