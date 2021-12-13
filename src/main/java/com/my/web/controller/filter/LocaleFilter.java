@@ -10,6 +10,11 @@ public class LocaleFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest)servletRequest;
         HttpSession session = request.getSession();
+        String lang = request.getParameter("lang");
+
+        if (lang != null) {
+            session.setAttribute("lang", lang);
+        }
 
         if (session.getAttribute("lang") == null) {
             session.setAttribute("lang", request.getLocale().getLanguage());

@@ -74,6 +74,11 @@
     <jsp:include page="../pagination.jsp"/>
 </div>
 
+<jsp:include page="../user/editProfile.jsp"/>
+<jsp:include page="../user/newAccount.jsp"/>
+<jsp:include page="../user/topUp.jsp"/>
+<jsp:include page="../user/userAccounts.jsp"/>
 <jsp:include page="../messages.jsp"/>
+
 </body>
 </html>

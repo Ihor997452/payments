@@ -29,7 +29,7 @@
                 <input type="number" name="code" id="code" class="form-control" placeholder="123.." required/>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="margin-top: 20px">
+            <button type="submit" class="btn btn-dark" style="margin-top: 20px">
                 <fmt:message key="jsp.verify.submit"/>
             </button>
         </form>

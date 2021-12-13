@@ -17,7 +17,6 @@ public class Pool {
     private final String url = PropertyReader.readPoolProperties("db.url");
     private final String user = PropertyReader.readPoolProperties("db.user");
     private final String password = PropertyReader.readPoolProperties("db.password");
-    private final String driver = PropertyReader.readPoolProperties("db.driver");
     private final Map<Connection, Boolean> connectionPool = new HashMap<>();
 
     private Pool() {

@@ -113,8 +113,7 @@ public abstract class AbstractManager<T extends Entity> implements Manager<T> {
         try {
             this.clear(connection);
         } catch (SQLException e) {
-            log.error(e);
-            log.error(StackTrace.getStackTrace(e));
+            log.error(e); log.error(StackTrace.getStackTrace(e));
             throw new SQLException("Could not clear DataBase", e);
         } finally {
             pool.free(connection);

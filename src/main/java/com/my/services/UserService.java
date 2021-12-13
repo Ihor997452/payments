@@ -149,5 +149,4 @@ public class UserService extends AbstractService<User> {
 
         return instance.abstractUpdate(user);
     }
-
 }

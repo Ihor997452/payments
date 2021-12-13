@@ -19,8 +19,6 @@ p
 0src/main/java/com/my/util/CurrencyConverter.java,f\1\f131b52dd553ddc964b800b80b3c886e91221930
 Y
 )src/main/java/com/my/util/StackTrace.java,6\a\6ac4c0a6e099f624ae8c04e50a90fe5d36bb2e1f
-]
--src/main/java/com/my/util/PropertyReader.java,8\e\8e1211f9894d145ab30207e738fee63e074d75a6
 X
 (src/main/java/com/my/util/Validator.java,8\a\8a23c4e3531f2fe996083471d3652219cf218e43
 ]
@@ -31,15 +29,9 @@ X
 +src/main/java/com/my/messages/Messages.java,8\6\86985e40943407f2f7f10f7f2f6ca5f254fefa92
 X
 (src/main/webapp/WEB-INF/jsp/includes.jsp,3\1\314c49b4767bf5cb589991d05d8cac69fb6bb863
-V
-&src/main/java/com/my/db/pool/Pool.java,1\b\1b4fcc7182956b1818efbded097a4a7e6999465d
 _
 /src/main/java/com/my/web/listener/Listener.java,d\3\d3d8fe8ab9107921f73955f073feb4510c3716de
 V
 &src/main/webapp/WEB-INF/jsp/verify.jsp,9\0\907623abb8d4c1fd5562aa748c17ceb4ce78e468
-U
-%src/main/webapp/WEB-INF/jsp/index.jsp,f\1\f16d1c46eaaabb105b651081f6c87e034b2028d2
 q
 Asrc/main/java/com/my/web/controller/conmmand/RegisterCommand.java,2\6\26aaa517684e2f587b40cc8a452fa8af36a79114
-i
-9src/main/java/com/my/web/controller/conmmand/Command.java,5\d\5d40fee8ec7a69be6c064af2520201913e336fbd

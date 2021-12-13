@@ -32,10 +32,10 @@
                 <fmt:message key="jsp.index.lorem"/>
             </p>
 
-            <a href="#" class="btn btn-primary" style="width: 150px !important;" id="signIn">
+            <a href="#" class="btn btn-dark" style="width: 150px !important;" id="signIn">
                 <fmt:message key="jsp.index.signIn"/>
             </a>
-            <a href="#" class="btn btn-primary" style="width: 150px !important;" id="signUp">
+            <a href="#" class="btn btn-dark" style="width: 150px !important;" id="signUp">
                 <fmt:message key="jsp.index.signUp"/>
             </a>
         </div>
@@ -61,10 +61,10 @@
                            placeholder="<fmt:message key="jsp.index.password"/>" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-dark" style="margin-top: 20px;">
                     <fmt:message key="jsp.index.logIn"/>
                 </button>
-                <a href="#" class="link-info" id="forgot-password">
+                <a href="#" class="link-secondary" id="forgot-password">
                     <fmt:message key="jsp.index.forgotPassword"/>
                 </a>
             </form>
@@ -118,7 +118,7 @@
                            placeholder="<fmt:message key="jsp.index.confirmPassword"/>" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-dark" style="margin-top: 20px;">
                     <fmt:message key="jsp.index.signUp"/>
                 </button>
             </form>
@@ -139,7 +139,7 @@
                     <input type="email" class="form-control" name="email-restore" id="email-restore" placeholder="example@mail.com" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-dark" style="margin-top: 20px;">
                     <fmt:message key="jsp.index.sendEmail"/>
                 </button>
             </form>
